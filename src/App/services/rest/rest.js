@@ -32,6 +32,12 @@ export const postMessage = (objet, callback) => {
 export const getUser = (name,callback) => {
     fetch(`${ADR_REST_SRV}/users?name=${name}`).then(flux=>flux.json()).then(obj=>{
         callback(obj[0]);
-    return obj;
+    return obj[0];
+    })
+}
+export const getUsers= (callback) => {
+    fetch(`${ADR_REST_SRV}/users._sort=name`).then(flux=>flux.json()).then(arr=>{
+        callback(arr);
+    return arr;
     })
 }
