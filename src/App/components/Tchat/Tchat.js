@@ -5,9 +5,11 @@ import { getMessages, getUsers } from '../../services/rest/rest';
 import TchatReader from '../TchatReader/TchatReader';
 import TchatUsers from '../TchatUsers/TchatUsers';
 import TchatSender from '../TchatSender/TchatSender';
+import { withRouter } from 'react-router-dom';
 class Tchat extends Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       lastMessageId: 0,
       messages: [], users: [], user: { id: 1, name: 'Alex' }
@@ -52,4 +54,4 @@ class Tchat extends Component {
 Tchat.propTypes = {}
 Tchat.defautProps = {}
 
-export default Tchat;
+export default withRouter(Tchat);

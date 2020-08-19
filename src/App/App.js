@@ -11,9 +11,10 @@ function App() {
           <Route path='/tchat/:id'>
             <Tchat></Tchat>
           </Route>
-          <Route path='/'>
+          <Route exact path='/'>
             <TchatLogin></TchatLogin>
           </Route>
+          <Route>Error 404</Route>
         </Switch>
       </div>
     </Router>
