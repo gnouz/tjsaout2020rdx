@@ -8,7 +8,7 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path='/tchat/:id'>
+          <Route path='/tchat/:name'>
             <Tchat></Tchat>
           </Route>
           <Route exact path='/'>
